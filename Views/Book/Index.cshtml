@@ -1,0 +1,20 @@
+@{
+  ViewData["Title"] = "List of Books";
+}
+
+<div>
+  <h1 class="display-4">@ViewData["Title"]</h1>
+
+  <table class="table table-striped table-bordered">
+
+    @foreach (var item in ViewBag.Books)
+    {
+      <tr>
+        <td>@item.title</td>
+        <td style="text-align: center;">
+          <a asp-action="Details" asp-route-title="@item.title" asp-route-smallThumbnail="@item.smallThumbnail" asp-route-authors="@item.authors" asp-route-publisher="@item.publisher" asp-route-publishedDate="@item.publishedDate" asp-route-description="@item.description" asp-route-ISBN10="@item.ISBN10" class="btn btn-sm btn-info">Details</a>
+        </td>
+      </tr>
+      }
+  </table>
+</div>

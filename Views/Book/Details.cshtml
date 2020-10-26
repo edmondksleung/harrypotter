@@ -1,0 +1,63 @@
+@{
+  ViewData["Title"] = "Book Details";
+}
+
+<h1 class="display-4">@ViewData["Title"]</h1>
+
+<div>
+  <hr />
+  <dl class="row">
+    <dt class="col-sm-2">
+       Title
+    </dt>
+    <dd class="col-sm-10">
+      @ViewBag.Data.title
+    </dd>
+
+    <dt class="col-sm-2">
+      Small Thumbnail
+    </dt>
+    <dd class="col-sm-10">
+      <img src="@ViewBag.Data.smallThumbnail">
+    </dd>
+
+    <dt class="col-sm-2">
+      Authors
+    </dt>
+    <dd class="col-sm-10">
+      @ViewBag.Data.authors
+    </dd>
+
+    <dt class="col-sm-2">
+        Publisher
+    </dt>
+    <dd class="col-sm-10">
+      @ViewBag.Data.publisher
+    </dd>
+
+    <dt class="col-sm-2">
+        Published Date
+    </dt>
+    <dd class="col-sm-10">
+      @ViewBag.Data.publishedDate
+    </dd>
+
+    <dt class="col-sm-2">
+        Description
+    </dt>
+    <dd class="col-sm-10">
+      @ViewBag.Data.description
+    </dd>
+
+    <dt class="col-sm-2">
+        ISBN_10
+    </dt>
+    <dd class="col-sm-10">
+      @ViewBag.Data.ISBN10
+    </dd>
+
+  </dl>
+</div>
+<div>
+  <a asp-action="Index" class="btn btn-primary">Back</a>
+</div>
